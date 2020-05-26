@@ -1,4 +1,5 @@
 ---
+
 - name: USERS | Adicionando usuários
   win_domain_user:
   name: ozzy
@@ -11,22 +12,9 @@
     - Domain Admins
     - Administrators
     
+    
 - name: COPY | Copiando arquivo de teste
   win_copy:
     src: tt.txt
     dest: C:\tt.txt
 
-- name: CHOCOLATEY | Desabilitando  enhanced exit codes
-  win_chocolatey_feature:
-    name: useEnhancedExitCodes
-    state: disabled
-
-- name: CHOCOLATEY | Instalando Softwares
-  win_chocolatey:
-    name: '{{ item }}'
-    state: latest
-    with_items:
-      - git
-      - firefox
-      - putty
-      - notepadplusplus

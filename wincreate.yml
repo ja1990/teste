@@ -3,6 +3,7 @@
   hosts: all
   
   tasks:
+- name: COPY | Copiando arquivo de teste
   win_copy:
     src: teste.txt
     dest: c:\teste.txt

@@ -1,5 +1,8 @@
 ---
-- name: COPY | Copiando arquivo de teste
+- name: COPY  
+  hosts: all
+  
+  tasks:
   win_copy:
     src: teste.txt
     dest: c:\teste.txt
